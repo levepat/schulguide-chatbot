@@ -12,7 +12,7 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done. Owner: Opus 5.5 coding ag
 | 6 | i18n: types, 7 locales, `detectLocale` + tests, `LocaleProvider`, `<html lang>` | §8.5, D | [x] |
 | 7 | Hooks: `useApiKey`, `useChat` | §7.1, §8.2 | [x] |
 | 8 | UI components + styles, logo/favicon | §8 | [~] |
-| 9 | Fake Anthropic server + cacheSimulator tests | §10.2 | [ ] |
+| 9 | Fake Anthropic server + cacheSimulator tests | §10.2 | [x] |
 | 10 | E2E: config + 9 cases | §10.3 | [ ] |
 | 11 | CI/CD workflow | §11 | [ ] |
 | 12 | Review (2 Haiku verifiers + `/pr-review`), fix findings | – | [ ] |
