@@ -1,0 +1,20 @@
+.select {
+  max-width: 7.5rem;
+  min-height: 2.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  background: var(--color-primary-dark);
+  color: var(--color-on-primary);
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.select:focus-visible {
+  outline-color: var(--color-on-primary);
+}
+
+.select option {
+  background: var(--color-background);
+  color: var(--color-text);
+}

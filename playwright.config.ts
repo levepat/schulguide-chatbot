@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   webServer: [
     {
-      command: "node tools/fake-anthropic/server.ts",
+      command: "npx tsx tools/fake-anthropic/server.ts",
       url: `${FAKE_URL}/__last-request`,
       reuseExistingServer: !process.env.CI,
     },

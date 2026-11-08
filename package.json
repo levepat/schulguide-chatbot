@@ -9,15 +9,15 @@
   "scripts": {
     "dev": "vite",
     "dev:fake": "concurrently -k -n fake,vite \"npm run fake\" \"cross-env VITE_ANTHROPIC_BASE_URL=http://localhost:4010 vite\"",
-    "fake": "node tools/fake-anthropic/server.ts",
+    "fake": "tsx tools/fake-anthropic/server.ts",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "lint": "eslint .",
     "test": "vitest run",
     "e2e": "playwright test",
-    "context:fetch": "node tools/fetch-homepage/fetchPages.ts",
-    "context:tokens": "node tools/context-tokens/countTokens.ts"
+    "context:fetch": "tsx tools/fetch-homepage/fetchPages.ts",
+    "context:tokens": "tsx tools/context-tokens/countTokens.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.6.0",
@@ -41,6 +41,7 @@
     "eslint": "^10.14.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "globals": "^17.14.0",
+    "tsx": "^4.23.15",
     "turndown": "^7.2.5",
     "turndown-plugin-gfm": "^1.0.2",
     "typescript": "^6.0.3",

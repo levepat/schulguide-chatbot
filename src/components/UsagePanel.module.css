@@ -1,0 +1,26 @@
+.panel {
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  font-size: 0.875rem;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.5rem;
+  min-height: 2.75rem;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+
+.title {
+  font-weight: 600;
+}
+
+.line {
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}

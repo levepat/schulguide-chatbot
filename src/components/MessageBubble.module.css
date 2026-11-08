@@ -1,0 +1,40 @@
+.bubble {
+  max-width: 100%;
+  min-width: 0;
+  padding: 0.625rem 0.875rem;
+  border-radius: var(--radius);
+}
+
+.user {
+  align-self: flex-end;
+  max-width: 85%;
+  background: var(--color-secondary);
+  color: var(--color-on-primary);
+  border-bottom-right-radius: 0.25rem;
+}
+
+.userText {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.bot {
+  align-self: stretch;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-bottom-left-radius: 0.25rem;
+}
+
+.note {
+  margin: 0.5rem 0 0;
+  color: var(--color-error-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.writing {
+  margin: 0;
+  color: var(--color-muted);
+  font-style: italic;
+}

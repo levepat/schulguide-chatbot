@@ -1,0 +1,23 @@
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
+}
+
+.message {
+  margin: 0;
+  font-weight: 600;
+}
+
+.detail {
+  max-width: 100%;
+  margin: 0;
+  font-size: 0.8125rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

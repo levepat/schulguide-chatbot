@@ -1,0 +1,21 @@
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.qr {
+  width: min(16rem, 100%);
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.hint {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  background: var(--color-error-bg);
+  color: var(--color-error-text);
+  font-size: 0.875rem;
+}

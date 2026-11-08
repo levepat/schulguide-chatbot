@@ -5,6 +5,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   base: "/schulguide/",
   plugins: [react()],
+  build: { chunkSizeWarningLimit: 1500 },
   test: {
     include: ["src/**/*.test.{ts,tsx}", "tools/**/*.test.ts"],
     environment: "node",

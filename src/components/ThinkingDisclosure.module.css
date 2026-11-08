@@ -1,0 +1,22 @@
+.details {
+  margin-bottom: 0.5rem;
+  border-left: 3px solid var(--color-secondary);
+  padding-left: 0.5rem;
+}
+
+.summary {
+  min-height: 2.75rem;
+  display: flex;
+  align-items: center;
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text {
+  margin: 0 0 0.25rem;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+}

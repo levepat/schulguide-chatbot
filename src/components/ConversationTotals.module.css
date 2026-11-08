@@ -1,0 +1,25 @@
+.totals {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 0.5rem;
+  min-height: 2.75rem;
+  cursor: pointer;
+  color: var(--color-secondary);
+}
+
+.title {
+  font-weight: 600;
+}
+
+.line {
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+}

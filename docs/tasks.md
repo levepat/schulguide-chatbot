@@ -9,9 +9,9 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done. Owner: Opus 5.5 coding ag
 | 3 | Context pipeline: `pages.json`, `BUILD_PROMPT.md`, `fetchPages.ts`, run fetch, generate `schulinfo.md` + `CONFLICTS.md`, `context:tokens` (human review of `schulinfo.md` pending, §5 step 3) | §5, B, C | [x] |
 | 4 | Domain: `types`, `pricing`, `costCalculator`, `keyFragment`, `viennaDate` + unit tests | §6.3, §9, §10.1 | [x] |
 | 5 | Prompt + API: `system-prompt.md`, `staticPrefix`, `config`, `requestBuilder`, `apiErrors`, `chatClient` + tests | §6, A | [x] |
-| 6 | i18n: types, 7 locales, `detectLocale` + tests, `LocaleProvider`, `<html lang>` | §8.5, D | [ ] |
-| 7 | Hooks: `useApiKey`, `useChat` | §7.1, §8.2 | [ ] |
-| 8 | UI components + styles, logo/favicon | §8 | [ ] |
+| 6 | i18n: types, 7 locales, `detectLocale` + tests, `LocaleProvider`, `<html lang>` | §8.5, D | [x] |
+| 7 | Hooks: `useApiKey`, `useChat` | §7.1, §8.2 | [x] |
+| 8 | UI components + styles, logo/favicon | §8 | [~] |
 | 9 | Fake Anthropic server + cacheSimulator tests | §10.2 | [ ] |
 | 10 | E2E: config + 9 cases | §10.3 | [ ] |
 | 11 | CI/CD workflow | §11 | [ ] |
