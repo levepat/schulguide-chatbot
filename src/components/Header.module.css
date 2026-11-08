@@ -37,6 +37,20 @@
   text-overflow: ellipsis;
 }
 
+@media (max-width: 26.24rem) {
+  .title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .actions {
+    margin-left: auto;
+  }
+}
+
 .actions {
   display: flex;
   align-items: center;

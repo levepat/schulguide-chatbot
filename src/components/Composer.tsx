@@ -34,6 +34,21 @@ export function Composer({ busy, canReset, onSend, onReset }: ComposerProps) {
       <label htmlFor={inputId} className="visually-hidden">
         {t.chat.inputLabel}
       </label>
+      <button
+        type="button"
+        className={styles.reset}
+        disabled={!canReset}
+        onClick={onReset}
+        aria-label={t.chat.newConversation}
+        title={t.chat.newConversation}
+      >
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+          <path
+            fill="currentColor"
+            d="M12 5a7 7 0 1 1-6.93 8H3.05A9 9 0 1 0 6 5.3V3H4v6h6V7H7.35A6.97 6.97 0 0 1 12 5Zm-1 3h2v3h3v2h-3v3h-2v-3H8v-2h3V8Z"
+          />
+        </svg>
+      </button>
       <textarea
         id={inputId}
         className={styles.input}
@@ -44,14 +59,9 @@ export function Composer({ busy, canReset, onSend, onReset }: ComposerProps) {
         onChange={(event) => setText(event.target.value)}
         onKeyDown={onKeyDown}
       />
-      <div className={styles.buttons}>
-        <button type="submit" className={buttons.primary} disabled={busy || !text.trim()}>
-          {t.chat.send}
-        </button>
-        <button type="button" className={buttons.secondary} disabled={!canReset} onClick={onReset}>
-          {t.chat.newConversation}
-        </button>
-      </div>
+      <button type="submit" className={buttons.primary} disabled={busy || !text.trim()}>
+        {t.chat.send}
+      </button>
     </form>
   );
 }

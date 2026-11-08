@@ -1,6 +1,7 @@
 .composer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: end;
   gap: 0.5rem;
 }
 
@@ -16,8 +17,20 @@
   font-size: 1rem;
 }
 
-.buttons {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.5rem;
+.reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+  background: var(--color-background);
+  color: var(--color-secondary);
+}
+
+.reset:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }

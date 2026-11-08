@@ -28,7 +28,7 @@ function corsHeaders(req: IncomingMessage): Record<string, string> {
     "access-control-allow-origin": "*",
     "access-control-allow-methods": "GET, POST, OPTIONS",
     "access-control-allow-headers": req.headers["access-control-request-headers"] ?? "*",
-    "access-control-expose-headers": "request-id",
+    "access-control-expose-headers": "request-id, x-should-retry, retry-after",
     "access-control-max-age": "600",
   };
 }
