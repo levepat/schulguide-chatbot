@@ -1,11 +1,11 @@
 # Implementation tasks
 
-Status: `[ ]` open · `[~]` in progress · `[x]` done. Owner: Sonnet 5.5 coding agent unless noted. Update this file when a task changes state.
+Status: `[ ]` open · `[~]` in progress · `[x]` done. Owner: Opus 5.5 coding agent unless noted. Update this file when a task changes state.
 
 | # | Task | Spec | Status |
 |---|---|---|---|
 | 1 | Repo setup: git on `main`, PDF → `context/source/`, AGENTS.md, rules, `/pr-review` skill, docs skeleton (Opus) | §4 | [x] |
-| 2 | Scaffold: Vite + React + TS strict, ESLint flat config, Vitest, Playwright, deps, npm scripts, `.gitignore` | §3, §4.1 | [ ] |
+| 2 | Scaffold: Vite + React + TS strict, ESLint flat config, Vitest, Playwright, deps, npm scripts, `.gitignore` | §3, §4.1 | [x] |
 | 3 | Context pipeline: `pages.json`, `BUILD_PROMPT.md`, `fetchPages.ts`, run fetch, generate `schulinfo.md` + `CONFLICTS.md`, `context:tokens` | §5, B, C | [ ] |
 | 4 | Domain: `types`, `pricing`, `costCalculator`, `keyFragment`, `viennaDate` + unit tests | §6.3, §9, §10.1 | [ ] |
 | 5 | Prompt + API: `system-prompt.md`, `staticPrefix`, `config`, `requestBuilder`, `apiErrors`, `chatClient` + tests | §6, A | [ ] |
