@@ -44,7 +44,7 @@ Vitest aliases `../../context/schulinfo.md?raw` to `src/prompt/fixtures/schulinf
 - The Sonnet 5.5 refusal `fallbacks` parameter is not used: the spec fixes one model and requires `stop_reason: "refusal"` to be shown as delivered.
 
 ## D13 – Local WebKit without sudo (2026-11-08)
-Playwright's WebKit needs `libmanette-0.2-0` (and `libhidapi-hidraw0`), which are not installed on the dev machine and need sudo. Workaround used locally: `apt-get download` both packages, `dpkg -x` them and copy the `.so` files into `~/.cache/ms-playwright/webkit-<rev>/minibrowser-wpe/lib/`. After that `npm run e2e` passes on both projects. CI is unaffected (`npx playwright install --with-deps`). The proper fix is `sudo npx playwright install-deps webkit`.
+Playwright's WebKit needs `libmanette-0.2-0` (and `libhidapi-hidraw0`), which are not installed on the dev machine and need sudo. Workaround used locally: `apt-get download` both packages, `dpkg -x` them and copy the `.so` files into `~/.cache/ms-playwright/webkit-<rev>/minibrowser-wpe/lib/`. After that `npm run e2e` passes on both projects. CI is unaffected (`npx playwright install --with-deps`). Resolved the same day: `sudo npx playwright install-deps webkit` was run, the copied libraries were removed, and WebKit e2e passes with the system packages.
 
 ## D14 – Cache-read price verified (2026-11-08)
 `pricing.ts` follows SPEC §9.1 (cache read 0.10 USD/MTok = 0.05× input). An older bundled reference listed 0.20 USD/MTok; the live pricing page (https://platform.claude.com/docs/en/about-claude/pricing, checked 2026-11-08) confirms Sonnet 5.5: input 2, 5m write 2.50, 1h write 4, cache hits 0.10 ("0.05x the base input price"), output 10. No change needed.
