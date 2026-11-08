@@ -1,0 +1,130 @@
+{
+  "fetchedAt": "2026-11-08T21:17:09.273Z",
+  "files": [
+    {
+      "id": 2066,
+      "group": "ab14",
+      "file": "2066-ausbildung-ab-14.md"
+    },
+    {
+      "id": 2117,
+      "group": "ab14",
+      "file": "2117-animation.md"
+    },
+    {
+      "id": 2085,
+      "group": "ab14",
+      "file": "2085-betriebsinformatik.md"
+    },
+    {
+      "id": 2118,
+      "group": "ab14",
+      "file": "2118-gamedesign.md"
+    },
+    {
+      "id": 2114,
+      "group": "ab14",
+      "file": "2114-informatik.md"
+    },
+    {
+      "id": 2113,
+      "group": "ab14",
+      "file": "2113-informationstechnik-fachschule.md"
+    },
+    {
+      "id": 2116,
+      "group": "ab14",
+      "file": "2116-interior-und-surfacedesign.md"
+    },
+    {
+      "id": 2112,
+      "group": "ab14",
+      "file": "2112-medizininformatik.md"
+    },
+    {
+      "id": 2153,
+      "group": "ab14",
+      "file": "2153-technisches-management-und-umwelt.md"
+    },
+    {
+      "id": 2067,
+      "group": "ab17",
+      "file": "2067-ausbildung-ab-17.md"
+    },
+    {
+      "id": 2163,
+      "group": "ab17",
+      "file": "2163-animation.md"
+    },
+    {
+      "id": 2699,
+      "group": "ab17",
+      "file": "2699-berufsreifepruefung.md"
+    },
+    {
+      "id": 2165,
+      "group": "ab17",
+      "file": "2165-gamedesign.md"
+    },
+    {
+      "id": 2584,
+      "group": "ab17",
+      "file": "2584-informatik-abendform.md"
+    },
+    {
+      "id": 2155,
+      "group": "ab17",
+      "file": "2155-informatik-tagesform.md"
+    },
+    {
+      "id": 2156,
+      "group": "ab17",
+      "file": "2156-interior-und-surfacedesign.md"
+    },
+    {
+      "id": 2096,
+      "group": "info",
+      "file": "2096-termine-schuljahr-2026-27.md"
+    },
+    {
+      "id": 2248,
+      "group": "info",
+      "file": "2248-kontakte.md"
+    },
+    {
+      "id": 5308,
+      "group": "info",
+      "file": "5308-erreichbarkeit.md"
+    },
+    {
+      "id": 2217,
+      "group": "info",
+      "file": "2217-schulleitung.md"
+    },
+    {
+      "id": 2215,
+      "group": "info",
+      "file": "2215-organisation.md"
+    },
+    {
+      "id": 2219,
+      "group": "info",
+      "file": "2219-schulleitbild.md"
+    },
+    {
+      "id": 11126,
+      "group": "extra",
+      "file": "11126-freigegenstaende.md"
+    },
+    {
+      "id": 9352,
+      "group": "extra",
+      "file": "9352-cybersecurity.md"
+    },
+    {
+      "id": 8706,
+      "group": "extra",
+      "file": "8706-bachelor-ki-management.md"
+    }
+  ]
+}

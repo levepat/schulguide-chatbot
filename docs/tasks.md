@@ -6,7 +6,7 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done. Owner: Opus 5.5 coding ag
 |---|---|---|---|
 | 1 | Repo setup: git on `main`, PDF → `context/source/`, AGENTS.md, rules, `/pr-review` skill, docs skeleton (Opus) | §4 | [x] |
 | 2 | Scaffold: Vite + React + TS strict, ESLint flat config, Vitest, Playwright, deps, npm scripts, `.gitignore` | §3, §4.1 | [x] |
-| 3 | Context pipeline: `pages.json`, `BUILD_PROMPT.md`, `fetchPages.ts`, run fetch, generate `schulinfo.md` + `CONFLICTS.md`, `context:tokens` | §5, B, C | [ ] |
+| 3 | Context pipeline: `pages.json`, `BUILD_PROMPT.md`, `fetchPages.ts`, run fetch, generate `schulinfo.md` + `CONFLICTS.md`, `context:tokens` (human review of `schulinfo.md` pending, §5 step 3) | §5, B, C | [x] |
 | 4 | Domain: `types`, `pricing`, `costCalculator`, `keyFragment`, `viennaDate` + unit tests | §6.3, §9, §10.1 | [x] |
 | 5 | Prompt + API: `system-prompt.md`, `staticPrefix`, `config`, `requestBuilder`, `apiErrors`, `chatClient` + tests | §6, A | [x] |
 | 6 | i18n: types, 7 locales, `detectLocale` + tests, `LocaleProvider`, `<html lang>` | §8.5, D | [ ] |
