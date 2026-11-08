@@ -37,7 +37,7 @@ Definition of done: `typecheck`, `lint`, `test`, `e2e` green **and** affected fi
 
 - Prose in docs: German or English. Identifiers, file names, code: English.
 - **Comments: as few as possible.** Only where the code cannot explain itself (a deliberate cast, a non-obvious API constraint). No restating what code does, no commented-out code.
-- `tools/**` runs via Node type stripping: erasable syntax only (no `enum`, `namespace`, parameter properties); import with `.ts` extensions.
+- `tools/**` runs via `tsx` (local distro Node lacks type stripping, see `docs/decisions.md` D6/D8); still erasable syntax only (no `enum`, `namespace`, parameter properties) with `.ts` import extensions.
 - Prefer small named exports; no default exports except where tooling requires them.
 
 ## Where to look
