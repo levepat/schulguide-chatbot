@@ -31,7 +31,7 @@ function createSdk(apiKey: string): Anthropic {
 
 function toChatError(error: unknown): ChatError {
   if (error instanceof APIError) {
-    return classifyApiFailure({ status: error.status, message: error.apiMessage ?? error.message });
+    return classifyApiFailure({ status: error.status, message: error.apiMessage ?? error.message, type: error.type });
   }
   return classifyApiFailure({ status: undefined, message: error instanceof Error ? error.message : String(error) });
 }

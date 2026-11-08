@@ -15,5 +15,8 @@ Status: `[ ]` open · `[~]` in progress · `[x]` done. Owner: Opus 5.5 coding ag
 | 9 | Fake Anthropic server + cacheSimulator tests | §10.2 | [x] |
 | 10 | E2E: config + 9 cases | §10.3 | [x] |
 | 11 | CI/CD workflow | §11 | [x] |
-| 12 | Review (2 Haiku verifiers + `/pr-review`), fix findings | – | [ ] |
-| 13 | Docs refresh, open-day checklist | §13 | [ ] |
+| 12 | Review (2 Haiku verifiers + `/pr-review`), fix findings (see `review-findings.md`) | – | [x] |
+| 13 | Docs refresh, open-day checklist | §13 | [x] |
+| 14 | Manual acceptance against the real API (`open-day-checklist.md`) – needs the real key | §13 | [ ] |
+| 15 | Human review of `context/schulinfo.md` + `CONFLICTS.md`; native-speaker check of translations | §5, §8.5 | [ ] |
+| 16 | GitHub: create repo `schulguide` in `Die-Spengergasse`, enable Pages (Actions), protect `main` | §11 | [ ] |

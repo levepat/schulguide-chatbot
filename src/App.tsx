@@ -15,7 +15,14 @@ export function App({ fragmentKey }: AppProps) {
   const [replacing, setReplacing] = useState(false);
 
   useEffect(() => {
-    if (fragmentKey) void submitKey(fragmentKey);
+    if (!fragmentKey) return;
+    let active = true;
+    void submitKey(fragmentKey).then((ok) => {
+      if (active && !ok) setReplacing(true);
+    });
+    return () => {
+      active = false;
+    };
   }, [fragmentKey, submitKey]);
 
   const onInvalidKey = useCallback(() => clearKey("invalidKey"), [clearKey]);
@@ -34,7 +41,7 @@ export function App({ fragmentKey }: AppProps) {
           checking={checking}
           problem={problem}
           onSubmit={(key) => void onSubmitKey(key)}
-          onCancel={replacing ? () => setReplacing(false) : undefined}
+          onCancel={replacing && apiKey !== null ? () => setReplacing(false) : undefined}
         />
       ) : (
         <ChatScreen key={apiKey} apiKey={apiKey} onInvalidKey={onInvalidKey} />

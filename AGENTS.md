@@ -16,7 +16,7 @@ Definition of done: `typecheck`, `lint`, `test`, `e2e` green **and** affected fi
 
 ## Architecture boundaries
 
-- `src/api/chatClient.ts` is the **only** module importing `@anthropic-ai/sdk`. UI and hooks see domain types only.
+- `src/api/chatClient.ts` is the **only** app module importing `@anthropic-ai/sdk` (tests under `tools/` may use it to drive the fake server). UI and hooks see domain types only.
 - Pure modules, no SDK/DOM/clock/network access: `requestBuilder`, `apiErrors` (mapping), `costCalculator`, `keyFragment`, `viennaDate` (clock injected), `detectLocale`, `staticPrefix`.
 - Components never call `chatClient`; chat flow lives in `useChat`, key storage in `useApiKey`.
 - One component / one module with one responsibility per file.

@@ -95,7 +95,7 @@ export function useChat({ apiKey, client = defaultClient, onInvalidKey }: UseCha
   const send = useCallback(
     (text: string) => {
       const trimmed = text.trim();
-      if (!trimmed || status === "streaming") return;
+      if (!trimmed || status === "streaming" || controllerRef.current) return;
       const base = pendingUserTurn(conversation) ? conversation.turns.slice(0, -1) : conversation.turns;
       const userTurn: UserTurn = { id: nextTurnId(), role: "user", text: trimmed, effort };
       const initialEffort = base.length === 0 ? effort : conversation.initialEffort;
@@ -106,7 +106,7 @@ export function useChat({ apiKey, client = defaultClient, onInvalidKey }: UseCha
 
   const retry = useCallback(() => {
     const userTurn = pendingUserTurn(conversation);
-    if (userTurn && status !== "streaming") void run(conversation, userTurn);
+    if (userTurn && status !== "streaming" && !controllerRef.current) void run(conversation, userTurn);
   }, [conversation, run, status]);
 
   const reset = useCallback(() => {

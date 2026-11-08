@@ -46,5 +46,5 @@ Vitest aliases `../../context/schulinfo.md?raw` to `src/prompt/fixtures/schulinf
 ## D13 – Local WebKit without sudo (2026-11-08)
 Playwright's WebKit needs `libmanette-0.2-0` (and `libhidapi-hidraw0`), which are not installed on the dev machine and need sudo. Workaround used locally: `apt-get download` both packages, `dpkg -x` them and copy the `.so` files into `~/.cache/ms-playwright/webkit-<rev>/minibrowser-wpe/lib/`. After that `npm run e2e` passes on both projects. CI is unaffected (`npx playwright install --with-deps`). The proper fix is `sudo npx playwright install-deps webkit`.
 
-## D14 – Cache-read price to verify (2026-11-08)
-`pricing.ts` follows SPEC §9.1 (cache read 0.10 USD/MTok = 0.05× input). The Claude API reference bundled with Claude Code (cached 2026-10-06) lists Sonnet 5.5 cache reads at 0.20 USD/MTok. The spec's source date (2026-10-12) is newer, so the spec value stays; check https://platform.claude.com/docs/en/about-claude/pricing before the open day and adjust `PRICE_PER_MTOK.cacheRead` (and the `costCalculator` test) if needed. It only affects the displayed cost.
+## D14 – Cache-read price verified (2026-11-08)
+`pricing.ts` follows SPEC §9.1 (cache read 0.10 USD/MTok = 0.05× input). An older bundled reference listed 0.20 USD/MTok; the live pricing page (https://platform.claude.com/docs/en/about-claude/pricing, checked 2026-11-08) confirms Sonnet 5.5: input 2, 5m write 2.50, 1h write 4, cache hits 0.10 ("0.05x the base input price"), output 10. No change needed.

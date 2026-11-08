@@ -33,6 +33,7 @@ export function useApiKey(client: ChatClient = defaultClient): ApiKeyState {
       setProblem(null);
       const result = await client.validateKey(trimmed, controller.signal);
       if (controller.signal.aborted) return false;
+      controllerRef.current = null;
       setChecking(false);
       if (!result.ok) {
         setProblem(result.error.kind === "invalidKey" ? "invalidKey" : "checkFailed");
@@ -46,6 +47,9 @@ export function useApiKey(client: ChatClient = defaultClient): ApiKeyState {
   );
 
   const clearKey = useCallback((reason?: KeyProblem) => {
+    controllerRef.current?.abort();
+    controllerRef.current = null;
+    setChecking(false);
     removeStorage(STORAGE_KEY);
     setApiKey(null);
     setProblem(reason ?? null);

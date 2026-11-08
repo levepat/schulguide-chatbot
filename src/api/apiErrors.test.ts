@@ -24,6 +24,18 @@ describe("classifyApiFailure", () => {
     }
   });
 
+  it("maps mid-stream overload and server errors to temporary", () => {
+    for (const type of ["overloaded_error", "api_error", "rate_limit_error"]) {
+      expect(classifyApiFailure({ status: undefined, message: "x", type }).kind).toBe("temporary");
+    }
+  });
+
+  it("maps other mid-stream error types to badRequest", () => {
+    expect(classifyApiFailure({ status: undefined, message: "x", type: "invalid_request_error" }).kind).toBe(
+      "badRequest",
+    );
+  });
+
   it("maps failures without status to network", () => {
     expect(classifyApiFailure({ status: undefined, message: "Connection error." }).kind).toBe("network");
   });

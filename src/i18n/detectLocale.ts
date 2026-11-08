@@ -10,7 +10,7 @@ export function detectLocale(languages: readonly string[]): Locale {
   for (const language of languages) {
     const primary = language.toLowerCase().split("-")[0];
     if (isLocale(primary)) return primary;
-    if (primary in ALIASES) return ALIASES[primary];
+    if (Object.hasOwn(ALIASES, primary)) return ALIASES[primary];
   }
   return "de";
 }
