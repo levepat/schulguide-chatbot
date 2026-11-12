@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-  base: "/schulguide/",
+  base: process.env.BASE_PATH ?? "/schulguide/",
   plugins: [react()],
   build: { chunkSizeWarningLimit: 1500 },
   test: {

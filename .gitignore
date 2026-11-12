@@ -6,3 +6,4 @@ blob-report
 *.local
 .env*
 *.tsbuildinfo
+context/raw/

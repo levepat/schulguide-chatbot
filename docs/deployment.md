@@ -1,23 +1,24 @@
 # Deployment
 
-## GitHub repository and Pages
+## GitHub Pages
 
-1. Create the private repo **`schulguide`** in the organisation `Die-Spengergasse`. The name matters: `vite.config.ts` uses `base: "/schulguide/"`, and the QR share links are built from it. With another name, change `base` (decision D1).
-2. Push `main`. Settings → Pages → Source: **GitHub Actions**.
-3. The workflow `.github/workflows/ci.yml` runs on every pull request to `main` and every push to `main`:
+1. Push the repo (or a fork of it) to GitHub. Settings → Pages → Source: **GitHub Actions**.
+2. The workflow `.github/workflows/ci.yml` runs on every pull request to `main` and every push to `main`:
    - job `test`: `npm ci`, typecheck, lint, unit tests, `npx playwright install --with-deps`, e2e against the fake server; uploads the Playwright report on failure;
    - job `deploy` (push to `main` only, `needs: test`): `npm run build` without `VITE_ANTHROPIC_BASE_URL` (→ real API), `upload-pages-artifact`, `deploy-pages` into the `github-pages` environment.
-4. The app is served at `https://die-spengergasse.github.io/schulguide/` (the URL is shown in the `deploy` job summary).
+3. The app is served at `https://<owner>.github.io/<repo>/` (the URL is shown in the `deploy` job summary).
 
 No secrets are needed: CI never calls the real API.
 
-## Branch protection for `main`
+### Base path
 
-Settings → Branches (or Rulesets) → rule for `main`:
+Vite needs the Pages sub-path at build time. `vite.config.ts` reads it from `BASE_PATH` (default `/schulguide/`); the deploy job sets `BASE_PATH: /${{ github.event.repository.name }}/`, so a fork or renamed repo works without code changes. The QR share links use the same base. Local dev, unit tests and e2e always use `/schulguide/`.
 
-- Require a pull request before merging.
-- Require status checks to pass: **`test`** (the job name from `ci.yml`), branches up to date.
-- Block force pushes and deletions.
+For a custom domain or a `<owner>.github.io` repo, set `BASE_PATH: /` in the deploy job.
+
+### Branch protection (optional)
+
+Settings → Branches (or Rulesets) → rule for `main`: require a pull request, require the status check **`test`**, block force pushes.
 
 ## API key runbook
 

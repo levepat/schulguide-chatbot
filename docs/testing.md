@@ -8,7 +8,7 @@
 | `npm run e2e` | Playwright; starts the fake server (port 4010) and `vite build` + `vite preview` (port 4173) with `VITE_ANTHROPIC_BASE_URL=http://localhost:4010` |
 | `npm run dev:fake` | Fake server + Vite dev server for manual exploration, no API cost |
 
-First-time setup: `npx playwright install chromium webkit` (CI: `npx playwright install --with-deps`). On a machine without WebKit system libraries see decision D13. Run one project with `npx playwright test --project=android` or `--project=iphone`.
+First-time setup: `npx playwright install chromium webkit` (CI: `npx playwright install --with-deps`). On Linux, WebKit also needs its system libraries: `sudo npx playwright install-deps webkit`. Run one project with `npx playwright test --project=android` or `--project=iphone`.
 
 E2E tests never touch the real API. Each test starts with `POST /__reset` on the fake server and a fresh browser context (empty `localStorage`). Tests run with one worker because they share the fake server's state.
 
@@ -28,7 +28,7 @@ E2E tests never touch the real API. Each test starts with `POST /__reset` on the
 | `detectLocale`: prefix matching, BKS variants, fallback | `src/i18n/detectLocale.test.ts` |
 | (extra) error mapping | `src/api/apiErrors.test.ts` |
 
-Unit tests use `src/prompt/fixtures/schulinfo.fixture.md` instead of the real knowledge base (decision D11).
+Unit tests use `src/prompt/fixtures/schulinfo.fixture.md` instead of the real knowledge base (alias in `vite.config.ts`), so they never depend on its content.
 
 ## Fake server tests (SPEC §10.2)
 

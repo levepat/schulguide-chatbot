@@ -27,7 +27,7 @@ export default defineConfig({
     },
     {
       command: `npx vite build && npx vite preview --port ${PREVIEW_PORT} --strictPort`,
-      env: { VITE_ANTHROPIC_BASE_URL: FAKE_URL },
+      env: { VITE_ANTHROPIC_BASE_URL: FAKE_URL, BASE_PATH: "/schulguide/" },
       url: `http://localhost:${PREVIEW_PORT}/schulguide/`,
       reuseExistingServer: !process.env.CI,
       timeout: 180_000,

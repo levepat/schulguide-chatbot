@@ -59,4 +59,4 @@ directly before that user turn. Requires the beta header `mid-conversation-outpu
 
 ## SDK typing
 
-`@anthropic-ai/sdk` 1.6.0 covers all fields (decision D9): no local type, no cast. `requestBuilder`'s `MessageRequest` is checked structurally against the SDK params at the single call site in `chatClient.ts`.
+`@anthropic-ai/sdk` 1.6.0 covers all fields: no local type, no cast. `requestBuilder`'s `MessageRequest` is checked structurally against the SDK params at the single call site in `chatClient.ts`.
