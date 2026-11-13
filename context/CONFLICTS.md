@@ -32,3 +32,10 @@ Regel: Die Homepage hat Vorrang. Ergänzungen, die nur in der Broschüre stehen,
 | H5 | Tippfehler in Stundentafeln | „Artelier und Produktion“ (Kolleg Interior), „Webprogramming und Mobile Computing“, „Data Science and Artificial Intelligence“ | Korrigiert zu „Atelier“, „Webprogrammierung“, „und“ (Schreibweise der Broschüre bzw. der übrigen Tafeln) |
 | H6 | Erreichbarkeit | „Matzleinsdorferplatz (… ab 2025 auch U5)“ – Seite zuletzt 2024 geändert, Aussage zeitlich überholt | „ab 2025 auch U5“ weggelassen; vom Menschen prüfen |
 | H7 | Summenzeilen Ausbildung ab 14 | Weder Homepage noch Broschüre haben eine Summenzeile; Homepage nennt einen einzelnen Wert „Stunden pro Woche“ | Summenzeile pro Jahrgang aus den Tafelwerten berechnet; Homepage-Wert separat genannt |
+
+## Ergänzung: Folder Cyber Security (Version 002, 01.11.2026)
+
+| # | Thema | Befund | Entscheidung |
+|---|---|---|---|
+| C1 | Neuer Ausbildungszweig „Höhere Lehranstalt für Cyber Security“ | Steht nur im Folder; Homepage (abgerufen 08.11.2026) und Broschüre kennen ihn nicht. Starttermin, Aufnahmeverfahren und Abteilungsvorstand fehlen. | Aufgenommen mit Quellenhinweis; fehlende Angaben nicht ergänzt, Verweis auf Infostand/Homepage |
+| C2 | Summenzeile Stundentafel Cyber Security | Folder hat keine Summenzeile | Aus den Folder-Werten berechnet: 32/35/36/36/38 |

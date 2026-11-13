@@ -1,5 +1,5 @@
 # HTL Spengergasse – Schulinformation
-Stand: 08.11.2026; Quellen: Schulbroschüre Ausgabe 2025-02, www.spengergasse.at (abgerufen 08.11.2026)
+Stand: 13.11.2026; Quellen: Schulbroschüre Ausgabe 2025-02, www.spengergasse.at (abgerufen 08.11.2026), Folder „Höhere Lehranstalt für Cyber Security“ (Version 002, 01.11.2026)
 
 Hinweis zu den Quellen: Bei Widersprüchen gilt die Homepage (aktueller) vor der Broschüre (Ausgabe 2025-02). Angaben mit „laut Broschüre“ stehen nur in der Broschüre. Bei allen Stundentafeln gilt: Schulautonome Änderungen vorbehalten. „–“ bedeutet: in diesem Jahrgang/Semester nicht unterrichtet.
 
@@ -17,6 +17,7 @@ Hinweis zu den Quellen: Bei Widersprüchen gilt die Homepage (aktueller) vor der
 | Bereich | Ausbildung | Form | Dauer | Abschluss |
 |---|---|---|---|---|
 | Informatik (ab 14) | Informatik (Höhere Lehranstalt für Informatik) | Tagesschule | 5 Jahre | Reife- und Diplomprüfung |
+| Informatik (ab 14) | Cyber Security (Höhere Lehranstalt für Cyber Security, neu) | Tagesschule | 5 Jahre | Reife- und Diplomprüfung |
 | Informatik (ab 14) | Medizininformatik (Abteilung Biomedizin- und Gesundheitstechnik) | Tagesschule | 5 Jahre | Reife- und Diplomprüfung |
 | Informatik (ab 14) | Informationstechnik – Fachschule | Tagesschule | 3,5 Jahre | Fachschulabschluss |
 | Technik + Wirtschaft (ab 14) | Wirtschaftsingenieure – Betriebsinformatik | Tagesschule | 5 Jahre | Reife- und Diplomprüfung |
@@ -157,6 +158,42 @@ Genauer laut Broschüre:
 | Systemplanung und Projektentwicklung | – | – | 3 | 4 | 6 |
 | Wahlpflichtgegenstand | – | – | – | 3 | 2 |
 | **Summe Wochenstunden** | 33 | 35 | 34 | 36 | 31 |
+
+### Cyber Security (Höhere Lehranstalt für Cyber Security) – neuer Ausbildungszweig
+
+Quelle: Folder „Höhere Lehranstalt für Cyber Security“ (Version 002, Stand 01.11.2026). Auf der Homepage noch nicht beschrieben; Starttermin, Aufnahmedetails und Abteilungsvorstand sind im Folder nicht angegeben – dazu am Infostand oder unter www.spengergasse.at nachfragen.
+
+- **Form und Dauer, Abschluss:** Ausbildung ab 14; 5 Jahre; Abschluss Reife- und Diplomprüfung. Danach hat man eine anerkannte fachliche Ausbildung und die allgemeine Hochschulberechtigung. Nach 3 Jahren Berufspraxis kann um den Titel Ingenieur angesucht werden.
+- **Die Ausbildung:** Die Absicherung von Computersystemen gegen Hackerangriffe erfordert so viel Spezialwissen, dass dafür ein eigener Ausbildungszweig eingerichtet wurde. Neben einer fundierten Allgemeinbildung gibt es eine fachlich kompetente Ausbildung in allen Belangen der Computersicherheit.
+- **Inhalte der Fachgegenstände:**
+  - Cyber Defense: Firewalls, Device Hardening, DevSecOps, moderne Sicherheitsarchitekturen, Security Data Analysis, Forensik und Anti-Forensik.
+  - Compliance und Ethics: Projekt- und Prozessmanagement, Risikomanagement, Datenschutz, Informationssicherheitsmanagement, Ethik in der Informationstechnologie, IT-Compliance, rechtliche Grundlagen zu Artificial Intelligence.
+  - Security Lab: Laborgrundlagen und Methodik, Red- und Blue-Team-Übungen, Purple Team, CTF und Wettbewerbe, Full-Scope-Simulation.
+  - Software Technologies: Softwareentwicklung, Datenmanagement, Softwarequalität.
+  - IT Infrastructure: PC- und Betriebssystemgrundlagen, Netzwerktechnik, Virtualisierung und Containerisierung, Serverdienste und Administration, Kryptografie und sichere Kommunikation.
+  - Ethical Hacking: eigener Pflichtgegenstand ab dem 2. Jahrgang (Inhalte im Folder nicht einzeln aufgeführt).
+- **Berufsfelder:** Penetration Tester (Red Team), IT-Security Analyst, Forensiker / Incident Responder, OSINT Analyst (Open Source Intelligence Specialist), Security Architect.
+
+#### Stundentafel
+
+| Gegenstand | I | II | III | IV | V |
+|---|---|---|---|---|---|
+| Religion / Ethik | 2 | 2 | 2 | 2 | 2 |
+| Deutsch | 2 | 2 | 2 | 2 | 2 |
+| Englisch | 3 | 2 | 2 | 2 | 2 |
+| Geografie, Geschichte und Politische Bildung | 2 | 2 | 2 | 2 | – |
+| Wirtschaft und Recht | – | – | – | 2 | 3 |
+| Bewegung und Sport | 2 | 2 | 2 | 1 | 1 |
+| Angewandte Mathematik | 4 | 3 | 3 | 2 | 2 |
+| Naturwissenschaften | 3 | 2 | 2 | 2 | 2 |
+| Software Technologies | 3 | 3 | 3 | 3 | 3 |
+| Compliance und Ethics | – | 2 | 2 | 2 | 2 |
+| IT Infrastructure | 6 | 6 | 4 | 2 | 2 |
+| Cyber Defense | – | 2 | 4 | 4 | 6 |
+| Ethical Hacking | – | 2 | 4 | 4 | 5 |
+| Security Lab | 4 | 4 | 4 | 6 | 6 |
+| Soziale und personale Kompetenz | 1 | 1 | – | – | – |
+| **Summe Wochenstunden** | 32 | 35 | 36 | 36 | 38 |
 
 ### Medizininformatik (Abteilung Biomedizin- und Gesundheitstechnik)
 
@@ -614,7 +651,7 @@ Bouldern; Cloud Computing mit AWS; Debattierclub & Modell-UNO; Dodgeball; Drama 
 
 ### Cybersecurity
 
-Angebote zur Cybersecurity an der HTL Spengergasse: Wahlpflichtfach Ethical Hacking (Informatik, ab dem 4. Jahrgang), Wahlpflichtgegenstand SOS – Software Security, CTF-Team sp3ng3rh4ck, Hackerinnen-Gruppe SpengerH4CKsen, Freifächer „Ethical Hacking / KI / CTF-Team“ und „Software Security Fundamentals“. Aktuelles: www.spengergasse.at (Schlagwort cyber-security).
+Neu: eigener Ausbildungszweig **Höhere Lehranstalt für Cyber Security** (ab 14, 5 Jahre, siehe „Ausbildung ab 14“). Weitere Angebote zur Cybersecurity an der HTL Spengergasse: Wahlpflichtfach Ethical Hacking (Informatik, ab dem 4. Jahrgang), Wahlpflichtgegenstand SOS – Software Security, CTF-Team sp3ng3rh4ck, Hackerinnen-Gruppe SpengerH4CKsen, Freifächer „Ethical Hacking / KI / CTF-Team“ und „Software Security Fundamentals“. Aktuelles: www.spengergasse.at (Schlagwort cyber-security).
 
 ### Bachelor KI-Management (IBS Akademie)
 
