@@ -1,5 +1,6 @@
 import type { AssistantTurn, UserTurn } from "../domain/types";
 import { useT } from "../i18n/localeContext";
+import { BotAvatar } from "./BotAvatar";
 import { Markdown } from "./Markdown";
 import styles from "./MessageBubble.module.css";
 import { ThinkingDisclosure } from "./ThinkingDisclosure";
@@ -30,11 +31,14 @@ export function MessageBubble({ turn }: MessageBubbleProps) {
   }
   const thinking = thinkingOf(turn);
   return (
-    <article className={`${styles.bubble} ${styles.bot}`} aria-label={t.chat.bot}>
-      {thinking && <ThinkingDisclosure text={thinking} />}
-      <Markdown text={textOf(turn)} />
-      {turn.stopReason === "max_tokens" && <p className={styles.note}>{t.chat.truncated}</p>}
-      <UsagePanel turn={turn} />
+    <article className={styles.botRow} aria-label={t.chat.bot}>
+      <BotAvatar />
+      <div className={`${styles.bubble} ${styles.bot}`}>
+        {thinking && <ThinkingDisclosure text={thinking} />}
+        <Markdown text={textOf(turn)} />
+        {turn.stopReason === "max_tokens" && <p className={styles.note}>{t.chat.truncated}</p>}
+        <UsagePanel turn={turn} />
+      </div>
     </article>
   );
 }

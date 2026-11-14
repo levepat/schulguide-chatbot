@@ -6,7 +6,7 @@
 .wrap::after {
   content: "";
   position: absolute;
-  right: 0.625rem;
+  right: 0.75rem;
   top: 50%;
   width: 0.4rem;
   height: 0.4rem;
@@ -19,15 +19,22 @@
 .select {
   appearance: none;
   -webkit-appearance: none;
-  max-width: 7.5rem;
+  max-width: 8rem;
   min-height: 2.75rem;
-  padding: 0.25rem 1.75rem 0.25rem 0.625rem;
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 0.5rem;
-  background: var(--color-primary-dark);
+  padding: 0.25rem 2rem 0.25rem 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-pill);
+  background: rgba(0, 0, 0, 0.18);
   color: var(--color-on-primary);
   font-size: 0.875rem;
+  font-weight: 600;
   text-overflow: ellipsis;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.select:hover {
+  background: rgba(0, 0, 0, 0.28);
 }
 
 .select:focus-visible {

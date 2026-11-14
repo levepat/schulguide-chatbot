@@ -22,6 +22,7 @@ Static React SPA (Vite, TypeScript strict) on GitHub Pages. The browser calls th
 | | `src/hooks/useChat.ts` | Conversation, effort selection, streaming draft, status, error, send / retry / reset, `AbortController` |
 | | `src/storage.ts` | `localStorage` access in try/catch, typed to the two allowed keys |
 | UI | `src/components/*` | One presentational component per file with a CSS module; never imports `src/api` |
+| | `src/styles/global.css` | Design tokens (light + dark via `prefers-color-scheme`), resets, reduced-motion rule |
 | Test infra | `tools/fake-anthropic/*` | Zero-dependency fake API: `server.ts` (HTTP), `sse.ts`, `cacheSimulator.ts`, `inspectRequest.ts` |
 
 ## Data flow of one question

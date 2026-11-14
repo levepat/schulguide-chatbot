@@ -1,23 +1,63 @@
 :root {
+  color-scheme: light dark;
   --color-primary: #ed1944;
   --color-primary-dark: #c40f35;
+  --color-primary-deep: #9e0c2b;
   --color-secondary: #004a8d;
+  --color-secondary-light: #1f6bc4;
+  --color-accent: #004a8d;
   --color-surface: #ededed;
   --color-text: #313131;
   --color-muted: #5c5c5c;
+  --color-page: #f3f5f9;
   --color-background: #ffffff;
-  --color-border: #c8c8c8;
+  --color-glass: rgba(255, 255, 255, 0.78);
+  --color-border: #e1e4eb;
+  --color-border-strong: #8a909e;
   --color-error-bg: #fdecef;
   --color-error-text: #9b0b2a;
   --color-on-primary: #ffffff;
-  --radius: 0.75rem;
+  --tint-accent: rgba(0, 74, 141, 0.07);
+  --tint-primary: rgba(237, 25, 68, 0.08);
+  --gradient-brand: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08);
+  --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08), 0 2px 4px rgba(16, 24, 40, 0.05);
+  --shadow-lg: 0 18px 48px rgba(16, 24, 40, 0.16), 0 4px 12px rgba(16, 24, 40, 0.08);
+  --shadow-primary: 0 6px 16px rgba(196, 15, 53, 0.32);
+  --radius: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-pill: 999px;
   --focus-ring: 0 0 0 3px rgba(0, 74, 141, 0.45);
   --header-height: 3.5rem;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   color: var(--color-text);
-  background: var(--color-background);
+  background: var(--color-page);
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-accent: #8cbcff;
+    --color-surface: #232c3d;
+    --color-text: #e8ebf1;
+    --color-muted: #a9b1c1;
+    --color-page: #0c111b;
+    --color-background: #161e2c;
+    --color-glass: rgba(22, 30, 44, 0.8);
+    --color-border: #2b3549;
+    --color-border-strong: #6d7890;
+    --color-error-bg: #3a1520;
+    --color-error-text: #ffb3c1;
+    --tint-accent: rgba(140, 188, 255, 0.1);
+    --tint-primary: rgba(237, 25, 68, 0.14);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.55);
+    --focus-ring: 0 0 0 3px rgba(140, 188, 255, 0.5);
+  }
 }
 
 *,
@@ -35,6 +75,11 @@ body {
 body {
   min-height: 100dvh;
   overflow-x: clip;
+  background:
+    radial-gradient(60rem 40rem at -10% -10%, var(--tint-primary), transparent 60%),
+    radial-gradient(50rem 40rem at 110% 20%, var(--tint-accent), transparent 60%),
+    var(--color-page);
+  background-attachment: fixed;
 }
 
 #root {
@@ -53,15 +98,21 @@ textarea {
 
 button {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
-  color: var(--color-secondary);
+  color: var(--color-accent);
+  text-underline-offset: 0.15em;
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-secondary);
+  outline: 3px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(237, 25, 68, 0.22);
 }
 
 .visually-hidden {
@@ -81,6 +132,7 @@ a {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }

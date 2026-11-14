@@ -59,8 +59,11 @@ export function Composer({ busy, canReset, onSend, onReset }: ComposerProps) {
         onChange={(event) => setText(event.target.value)}
         onKeyDown={onKeyDown}
       />
-      <button type="submit" className={buttons.primary} disabled={busy || !text.trim()}>
-        {t.chat.send}
+      <button type="submit" className={`${buttons.primary} ${styles.send}`} disabled={busy || !text.trim()}>
+        <span className={styles.sendLabel}>{t.chat.send}</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M3.4 20.4 21 12 3.4 3.6l-.1 6.5L15 12 3.3 13.9l.1 6.5Z" />
+        </svg>
       </button>
     </form>
   );

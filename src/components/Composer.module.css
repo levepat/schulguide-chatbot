@@ -9,12 +9,26 @@
   width: 100%;
   min-height: 2.75rem;
   max-height: 8rem;
-  padding: 0.625rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 1.375rem;
+  background: var(--color-background);
   resize: none;
   field-sizing: content;
   font-size: 1rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.input::placeholder {
+  color: var(--color-muted);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: var(--focus-ring);
 }
 
 .reset {
@@ -24,13 +38,37 @@
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
-  border: 2px solid var(--color-secondary);
-  border-radius: var(--radius);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
   background: var(--color-background);
-  color: var(--color-secondary);
+  color: var(--color-accent);
+  transition:
+    transform 0.3s var(--ease-out),
+    background-color 0.2s;
+}
+
+.reset:hover:not(:disabled) {
+  background: var(--tint-accent);
+  transform: rotate(-45deg);
 }
 
 .reset:disabled {
-  opacity: 0.45;
+  opacity: 0.4;
   cursor: not-allowed;
+}
+
+@media (max-width: 26.24rem) {
+  .send {
+    width: 2.75rem;
+    padding: 0;
+  }
+
+  .sendLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
 }
