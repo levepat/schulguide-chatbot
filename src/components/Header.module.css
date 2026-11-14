@@ -8,17 +8,9 @@
   min-height: var(--header-height);
   padding: 0.5rem 0.75rem;
   padding-top: max(0.5rem, env(safe-area-inset-top));
-  background: var(--gradient-brand);
+  background: var(--color-primary);
   color: var(--color-on-primary);
   box-shadow: 0 6px 20px rgba(196, 15, 53, 0.25);
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(30rem 8rem at 85% -40%, rgba(255, 255, 255, 0.22), transparent 70%);
-  pointer-events: none;
 }
 
 .logoBadge {

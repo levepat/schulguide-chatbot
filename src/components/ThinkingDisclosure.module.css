@@ -1,7 +1,7 @@
 .details {
   margin-bottom: 0.75rem;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, var(--tint-accent), var(--tint-primary));
+  background: var(--tint-accent);
 }
 
 .summary {

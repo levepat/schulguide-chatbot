@@ -19,7 +19,6 @@
   --color-on-primary: #ffffff;
   --tint-accent: rgba(0, 74, 141, 0.07);
   --tint-primary: rgba(237, 25, 68, 0.08);
-  --gradient-brand: linear-gradient(120deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08);
   --shadow-md: 0 4px 12px rgba(16, 24, 40, 0.08), 0 2px 4px rgba(16, 24, 40, 0.05);
   --shadow-lg: 0 18px 48px rgba(16, 24, 40, 0.16), 0 4px 12px rgba(16, 24, 40, 0.08);
@@ -75,11 +74,7 @@ body {
 body {
   min-height: 100dvh;
   overflow-x: clip;
-  background:
-    radial-gradient(60rem 40rem at -10% -10%, var(--tint-primary), transparent 60%),
-    radial-gradient(50rem 40rem at 110% 20%, var(--tint-accent), transparent 60%),
-    var(--color-page);
-  background-attachment: fixed;
+  background: var(--color-page);
 }
 
 #root {
